@@ -126,16 +126,17 @@ export default function LinearDeterminate(props) {
             <div className={classes.value}>{Number.parseFloat(Value).toFixed(precision)} {Unit !=="NoUnit"&&<span>{Unit}</span>}</div>
                 
             <ThemeProvider theme={theme}>
-
                 <LinearProgress  color="primary"  variant="determinate" value={ValueCal > 0 ? (100 / (Max / ValueCal)) : 0} style={{ height: '40px' }} />
             </ThemeProvider>
+
             {<div className={classes.imgContainer}>
                 {isStab&&<div style={{ fontSize:35, border:'1px solid rgb(0,0,0,0.2)', padding:10, borderRadius:5, marginTop:10}}><span>STAB</span></div>}
                 {isZero&&<div style={{marginLeft:5, fontSize:35,  border:'1px solid rgb(0,0,0,0.2)', padding:10, borderRadius:5, marginTop:10}}><span>ZERO</span></div>}
                 {isTare&&<div style={{marginLeft:5, fontSize:35,  border:'1px solid rgb(0,0,0,0.2)', padding:10, borderRadius:5, marginTop:10}}><span>NET</span></div>}
-
             </div>}
+
             <hr></hr>
+            
             <div style={{bottom:0, textAlign: 'center'}}>
             <ThemeProvider theme={theme}>
                 <Button variant="outlined" onClick={tare} style={{height:80, width:200, fontSize: 30, fontWeight: 'bold'}}>
