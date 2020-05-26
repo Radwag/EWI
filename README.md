@@ -1,4 +1,7 @@
+# **E**xtended **W**eb **I**nterface
+> **EWI** - Weighting custom interface
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+***
 
 ## Available Scripts
 
