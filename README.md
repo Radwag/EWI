@@ -1,56 +1,57 @@
 ## OPIS EWI
 
-Aplikacja oparta na REACT oraz nodejs.<br/>
+Application based on REACT and nodejs.<br/>
 </br>
 
-### Interfes bazodanowy JSON dla HY10
-Plik z opisem znajduje się tutaj:
+### JSON Database Interface for HY10
+The description file can be found here:
 https://github.com/Radwag/EWI/blob/master/HY10%20JSON%20Data%20Exchange%20Interface.pdf
 
 ### App.js
 
-Główny plik aplikacji: </br>
+Main application file: </br>
 
-Funkcja closeWindow() - służy do zamknięcia aplikacji (zamyka przeglądarkę)
+closeWindow() - function used to close the application (closes the browser)
 
 ### ProgresBar.js
 
-Funkcja runSocket() - uruchamia websocket na localhost na porcie 4101
+runSocket() - function used to launch websocket on localhost at 4101 port
 
-Co 250 milisekund zostaje wysłane po websokecie zapytanie o masę
+Every 250 milliseconds a mass query is sent via websocket
 
 ```{ COMMAND: 'GET_MASS' }```
 
-i zostają zaktualizowane następujące zmienne:
+and the following variables are updated:
 
 ``` 
-Max - waga maksymalna
-NetAct.Value - wartość aktualna
-NetAct.Unit - jednostka aktualna
-NetCal.Value - wartość kalibracyjna
-isStab - czy stabilny
-isTare - czy wytarowany
-isZero - czy zero
-NetAct.Precision - aktualna precyzja
+Max - maximum capacity
+NetAct.Value - current value
+NetAct.Unit - current unit
+NetCal.Value - calibration value
+isStab - if stable
+isTare - if tared
+isZero - if zeroed
+NetAct.Precision - current precision
 ```
 
-Funkcja tare() - wysyła po websokecie komendę do tarowania wagi
+tare() - function used to send tare command via websocket
 
 ```{ COMMAND: 'TARE' }```
 
-Funkcja zero() - wysyła po websokecie komendę do zerowania wagi
+zero() - function used to send zero command via websocket
 
 ```{ COMMAND: 'ZERO' }```
 
 
-## Wersja produkcyjna
+## Production version
 
-Aby przygotować wersję produkcyjną uruchamiamy komendę
+To prepare production version, run the following command:
 
 ```npm run build```
 
 ### start.js
 
-Plik uruchmiający aplikację w trybie produkcyjnym
+File starting the application in production mode
 
 ```node start.js```
+
