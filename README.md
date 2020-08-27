@@ -1,4 +1,4 @@
-## OPIS EWI
+## EWI
 
 Application based on REACT and nodejs.<br/>
 </br>
