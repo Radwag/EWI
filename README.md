@@ -1,11 +1,11 @@
-## EWI
+## Extended Web Interface
 
 ![Alt text](en_header.png)
 
 This application is an example of how a company can create its own program for the HY10 terminal. It enables basic data exchange via websocket (JSON, e.g. mass request, taring, zeroing.
 The application can be a base for further development by adding new components and using additional commands presented in the JSON Database Interface for HY10 file.
 
-![Alt text](relative/_HY-10-1.jpg?raw=true "Title")
+![Alt text](_HY-10-1.jpg")
 
 Application based on REACT and nodejs.<br/>
 </br>
